@@ -77,9 +77,11 @@ match ($act) {
   'form-sua-khach-hang' => (new AdminTaiKhoanController())->formEditKhachHang(),
   'sua-khach-hang' => (new AdminTaiKhoanController())->postEditKhachHang(),
   'chi-tiet-khach-hang' => (new AdminTaiKhoanController())->detailKhachHang(),
-  'sua-anh-tai-khoan' => (new AdminTaiKhoanController)->suaAnhTaiKhoanAdmin(),
-  'sua-thong-tin-ca-nhan-quan-tri' => (new AdminTaiKhoanController)->postEditCaNhanQuanTri(),
-  'sua-mat-khau-ca-nhan-quan-tri' => (new AdminTaiKhoanController)->postEditMatKhauCaNhan(),
+'sua-anh-tai-khoan' => (new AdminTaiKhoanController())->suaAnhTaiKhoanAdmin(),
+'sua-thong-tin-ca-nhan-quan-tri' => (new AdminTaiKhoanController())->postEditCaNhanQuanTri(),
+'sua-mat-khau-ca-nhan-quan-tri' => (new AdminTaiKhoanController())->postEditMatKhauCaNhan(),
+// 'bieu-do' => (new AdminBaoCaoThongKeController())->bieuDo(),
+
 
 
   // route bình luận
@@ -98,5 +100,5 @@ match ($act) {
 
   'sua-mat-khau-ca-nhan-quan-tri' => (new AdminTaiKhoanController())->postEditMatKhauCaNhan(),
   // bieu do thong ke
-  'bieu-do' => (new AdminBaoCaoThongKeController)->bieuDo(),
+  'bieu-do' => (new AdminBaoCaoThongKeController())->bieuDo(),
 };

@@ -27,7 +27,7 @@ include "./views/layout/header.php"
 
 
                             <a href="index.php?act=form-them-danh-muc">
-                                <h1>Quản Lý Danh Mục Mỹ Phẩm</h1>
+                                <h1>Quản Lý Danh Mục Sản Phẩm</h1>
                             </a>
                         </div>
 

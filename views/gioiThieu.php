@@ -28,7 +28,25 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="about-thumb">
-                        <img src="https://static.vecteezy.com/system/resources/previews/009/836/222/non_2x/nbh-letter-design-nbh-letter-logo-design-on-black-background-nbh-creative-initials-letter-logo-concept-nbh-letter-design-nbh-letter-logo-design-on-black-background-n-vector.jpg" alt="about thumb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
+                    <!-- Snowflake -->
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="lightblue" stroke-width="3" />
+                    <line x1="50" y1="10" x2="50" y2="90" stroke="lightblue" stroke-width="2" />
+                    <line x1="10" y1="50" x2="90" y2="50" stroke="lightblue" stroke-width="2" />
+                    <line x1="20" y1="20" x2="80" y2="80" stroke="lightblue" stroke-width="2" />
+                    <line x1="80" y1="20" x2="20" y2="80" stroke="lightblue" stroke-width="2" />
+
+                    <!-- LuxeWinter text -->
+                    <a class="navbar-brand fw-bold" href="index.php?act=home">
+                <text x="110" y="55" font-family="Georgia, serif" font-size="36" fill="silver">
+                        Luxe
+                    </text>
+                    <text x="190" y="55" font-family="Georgia, serif" font-size="28" fill="lightblue">
+                        Winter
+                    </text>
+                </a>
+
+                </svg>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -37,8 +55,13 @@
                         <h5 class="about-sub-title">
                            Được thành lập ngày 28/10/2024
                         </h5>
-                        <p>Chào mừng bạn đến với NBH, cửa hàng mỹ phẩm mới mẻ mang đến cho bạn những sản phẩm làm đẹp chất lượng, an toàn và hiệu quả. Chúng tôi tự hào là điểm đến lý tưởng để bạn khám phá các dòng sản phẩm mỹ phẩm đa dạng, từ skincare chăm sóc da cho đến makeup hoàn hảo, phù hợp với mọi nhu cầu và loại da. Với sứ mệnh mang lại vẻ đẹp tự nhiên và sự tự tin cho mỗi khách hàng, NBH cam kết cung cấp các sản phẩm chính hãng, nguồn gốc rõ ràng, được lựa chọn kỹ càng từ các thương hiệu uy tín trên thị trường.</p>
-                        <p>Hãy đến với chúng tôi để trải nghiệm không gian mua sắm thân thiện, dịch vụ tư vấn chuyên nghiệp, và những chương trình ưu đãi hấp dẫn. Đừng bỏ lỡ cơ hội chăm sóc sắc đẹp mỗi ngày với NBH nơi làm đẹp bắt đầu từ sự tin tưởng!</p>
+                        <p>Chào mừng bạn đến với LuxeWinter, cửa hàng thời trang mùa đông mang đến cho bạn những sản phẩm quần áo chất lượng, ấm áp và phong cách. Chúng tôi tự hào là điểm đến lý tưởng để bạn khám phá các bộ sưu tập thời trang mùa đông đa dạng, từ áo khoác, áo len, khăn quàng, đến phụ kiện giữ ấm tinh tế, phù hợp với mọi nhu cầu và phong cách cá nhân.</p>
+                        <p>
+Đã cập nhật bộ nhớ
+Chào mừng bạn đến với LuxeWinter, cửa hàng thời trang mùa đông mang đến cho bạn những sản phẩm quần áo chất lượng, ấm áp và phong cách. Chúng tôi tự hào là điểm đến lý tưởng để bạn khám phá các bộ sưu tập thời trang mùa đông đa dạng, từ áo khoác, áo len, khăn quàng, đến phụ kiện giữ ấm tinh tế, phù hợp với mọi nhu cầu và phong cách cá nhân.
+
+Với sứ mệnh mang lại sự thoải mái và tự tin cho mỗi khách hàng trong mùa đông lạnh giá, LuxeWinter cam kết cung cấp các sản phẩm chính hãng, chất liệu cao cấp, được lựa chọn kỹ lưỡng từ các thương hiệu uy tín trên thị trường.</p>
+<p>Hãy ghé thăm website của chúng tôi để trải nghiệm không gian mua sắm tiện lợi, dịch vụ tư vấn chuyên nghiệp, và những chương trình ưu đãi hấp dẫn. Đừng bỏ lỡ cơ hội giữ ấm và làm đẹp mùa đông với LuxeWinter – nơi phong cách gặp gỡ sự ấm áp!</p>
                     </div>
                 </div>
             </div>
@@ -72,8 +95,25 @@
                             </div>
                         </div>
                         <div class="team-content text-center">
-                            <h6 class="team-member-name">Vũ Trọng Nam</h6>
+                            <h6 class="team-member-name">Đăng Duy Tiến</h6>
                             <p>C.E.O & Marketing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team-member mb-30">
+                        <div class="team-thumb">
+                            <img src="assets/img/team/team_member_1.jpg" alt="">
+                            <div class="team-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center">
+                            <h6 class="team-member-name">Nguyễn Tiến Thành</h6>
+                            <p>Bộ trưởng Khói Thở</p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +129,7 @@
                             </div>
                         </div>
                         <div class="team-content text-center">
-                            <h6 class="team-member-name">Lê Ngọc Ban</h6>
+                            <h6 class="team-member-name">VŨ Hữu Duy</h6>
                             <p>Trưởng Bộ Phận Bán Hàng</p>
                         </div>
                     </div>
@@ -106,7 +146,7 @@
                             </div>
                         </div>
                         <div class="team-content text-center">
-                            <h6 class="team-member-name">Trần Đức Hiểu</h6>
+                            <h6 class="team-member-name">Vương Tuấn Long</h6>
                             <p>Trưởng Bộ Phận Kho Và Hàng Hóa</p>
                         </div>
                     </div>

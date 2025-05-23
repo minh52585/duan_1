@@ -14,7 +14,25 @@
                             <div class="widget-title">
                                 <div class="widget-logo">
                                     <a href="index.html">
-                                        <img class="logo-img" src="./views/assets/img/logo/logo.png" alt="brand logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 300 100">
+                    <!-- Snowflake -->
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="lightblue" stroke-width="3" />
+                    <line x1="50" y1="10" x2="50" y2="90" stroke="lightblue" stroke-width="2" />
+                    <line x1="10" y1="50" x2="90" y2="50" stroke="lightblue" stroke-width="2" />
+                    <line x1="20" y1="20" x2="80" y2="80" stroke="lightblue" stroke-width="2" />
+                    <line x1="80" y1="20" x2="20" y2="80" stroke="lightblue" stroke-width="2" />
+
+                    <!-- LuxeWinter text -->
+                    <a class="navbar-brand fw-bold" href="index.php?act=home">
+                <text x="110" y="55" font-family="Georgia, serif" font-size="36" fill="silver">
+                        Luxe
+                    </text>
+                    <text x="190" y="55" font-family="Georgia, serif" font-size="28" fill="lightblue">
+                        Winter
+                    </text>
+                </a>
+
+                </svg>
                                     </a>
                                 </div>
                             </div>
@@ -30,8 +48,8 @@
                                 <address class="contact-block">
                                     <ul>
                                         <li><i class="pe-7s-home"></i> Trịnh Văn Bô,Hà Nội</li>
-                                        <li><i class="pe-7s-mail"></i> <a href="mailto:demo@plazathemes.com">miphamnbh@gmail.com </a></li>
-                                        <li><i class="pe-7s-call"></i> <a href="tel:+855831662">+855831662</a></li>
+                                        <li><i class="pe-7s-mail"></i> <a href="duyvhph52605@gmail.com">duyvhph52605@gmail.com </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:+3866466521">+386466521</a></li>
                                     </ul>
                                 </address>
                             </div>

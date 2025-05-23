@@ -10,7 +10,7 @@
         <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
             <!-- single slider item start -->
             <div class="hero-single-slide hero-overlay">
-                <div class="hero-slider-item bg-img" data-bg="./views/assets/img/slider/banner-my-pham-1.jpg">
+                <div class="hero-slider-item bg-img" data-bg="./views/assets/img/slider/3.jpg">
                     <div class="container">
                         <div class="row">
 
@@ -22,7 +22,7 @@
             <!-- single slider item start -->
             <!-- single slider item start -->
             <div class="hero-single-slide hero-overlay">
-                <div class="hero-slider-item bg-img" data-bg="./views/assets/img/slider/baner-mypham2.jpg">
+                <div class="hero-slider-item bg-img" data-bg="./views/assets/img/slider/1.jpg">
                     <div class="container">
                         <div class="row">
 
@@ -34,7 +34,7 @@
             <!-- single slider item start -->
             <!-- single slider item start -->
             <div class="hero-single-slide hero-overlay">
-                <div class="hero-slider-item bg-img" data-bg="./views/assets/img/slider/baner-mypham-2.png">
+                <div class="hero-slider-item bg-img" data-bg="./views/assets/img/slider/2.jpg">
                     <div class="container">
                         <div class="row">
 
@@ -223,83 +223,7 @@
     <!-- product area end -->
 
     <!-- product banner statistics area start -->
-    <section class="product-banner-statistics">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="product-banner-carousel slick-row-10">
-                        <!-- banner single slide start -->
-                        <div class="banner-slide-item">
-                            <figure class="banner-statistics">
-                                <a href="#">
-
-                                    <img src="./views/assets/img/banner/banner.jpg" style="width: 333px; height: 460px;"
-                                        alt="product banner">
-                                </a>
-                                <div class="banner-content banner-content_style2">
-                                    <h5 class="banner-text3"><a href="#">BRACELATES</a></h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- banner single slide start -->
-                        <!-- banner single slide start -->
-                        <div class="banner-slide-item">
-                            <figure class="banner-statistics">
-                                <a href="#">
-                                    <img src="./views/assets/img/banner/banner6.jpg"
-                                        style="width: 333px; height: 460px;" alt="product banner">
-                                </a>
-                                <div class="banner-content banner-content_style2">
-                                    <h5 class="banner-text3"><a href="#">EARRINGS</a></h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- banner single slide start -->
-                        <!-- banner single slide start -->
-                        <div class="banner-slide-item">
-                            <figure class="banner-statistics">
-                                <a href="#">
-                                    <img src="./views/assets/img/banner/banner3.jpg"
-                                        style="width: 333px; height: 460px;" alt="product banner">
-                                </a>
-                                <div class="banner-content banner-content_style2">
-                                    <h5 class="banner-text3"><a href="#">NECJLACES</a></h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- banner single slide start -->
-                        <!-- banner single slide start -->
-                        <div class="banner-slide-item">
-                            <figure class="banner-statistics">
-                                <a href="#">
-                                    <img src="./views/assets/img/banner/banner5.jpg"
-                                        style="width: 333px; height: 460px;" alt="product banner">
-
-                                </a>
-                                <div class="banner-content banner-content_style2">
-                                    <h5 class="banner-text3"><a href="#">RINGS</a></h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- banner single slide start -->
-                        <!-- banner single slide start -->
-                        <div class="banner-slide-item">
-                            <figure class="banner-statistics">
-                                <a href="#">
-                                    <img src="./views/assets/img/banner/banner7.jpg"
-                                        style="width: 333px; height: 460px;" alt="product banner">
-                                </a>
-                                <div class="banner-content banner-content_style2">
-                                    <h5 class="banner-text3"><a href="#">PEARLS</a></h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- banner single slide start -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- product banner statistics area end -->
 
     <!-- featured product area start -->
@@ -400,63 +324,7 @@
     <!-- featured product area end -->
 
     <!-- testimonial area start -->
-    <section class="testimonial-area section-padding bg-img"
-        data-bg="./views/assets/img/testimonial/testimonials-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- section title start -->
-                    <div class="section-title text-center">
-                        <h2 class="title">Lời đánh giá</h2>
-                        <p class="sub-title">Của khách hàng</p>
-                    </div>
-                    <!-- section title start -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="testimonial-thumb-wrapper">
-                        <div class="testimonial-thumb-carousel">
-                            <div class="testimonial-thumb">
-                                <img src="./views/assets/img/testimonial/testimonial-1.png" alt="testimonial-thumb">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="./views/assets/img/testimonial/testimonial-2.png" alt="testimonial-thumb">
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <div class="testimonial-content-wrapper">
-                        <div class="testimonial-content-carousel">
-                            <div class="testimonial-content">
-                                <p>Sản phẩm rất chất lượng, đáng giá với giá tiền giao hàng nhanh chóng và đóng gói sản phẩm cẩn thận chất lượng sản phẩm vượt xa mong đợi của tôi, rất hài lòng.</p>
-                                <div class="ratings">
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                </div>
-                                <h5 class="testimonial-author">Cẩm Tiên</h5>
-                            </div>
-                            <div class="testimonial-content">
-                                <p>Chất lượng sản phẩm như hàng hiệu giá đúng với lượng sản phẩm sản phẩm giống như mô tả trên trang web, không có sự chênh lệch đáng kể dễ dàng sử dụng sản phẩm.</p>
-                                <div class="ratings">
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                    <span><i class="fa fa-star-o"></i></span>
-                                </div>
-                                <h5 class="testimonial-author">Ngọc Ánh </h5>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!-- testimonial area end -->
 
     <!-- group product start -->
@@ -466,63 +334,7 @@
   
 
     <!-- brand logo area start -->
-    <div class="brand-logo section-padding pt-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="brand-logo-carousel slick-row-10 slick-arrow-style">
-                        <!-- single brand start -->
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="./views/assets/img/brand/1.png" alt="">
-                            </a>
-                        </div>
-                        <!-- single brand end -->
-
-                        <!-- single brand start -->
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="./views/assets/img/brand/2.png" alt="">
-                            </a>
-                        </div>
-                        <!-- single brand end -->
-
-                        <!-- single brand start -->
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="./views/assets/img/brand/3.png" alt="">
-                            </a>
-                        </div>
-                        <!-- single brand end -->
-
-                        <!-- single brand start -->
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="./views/assets/img/brand/4.png" alt="">
-                            </a>
-                        </div>
-                        <!-- single brand end -->
-
-                        <!-- single brand start -->
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="./views/assets/img/brand/5.png" alt="">
-                            </a>
-                        </div>
-                        <!-- single brand end -->
-
-                        <!-- single brand start -->
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="./views/assets/img/brand/6.png" alt="">
-                            </a>
-                        </div>
-                        <!-- single brand end -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- brand logo area end -->
 </main>
 

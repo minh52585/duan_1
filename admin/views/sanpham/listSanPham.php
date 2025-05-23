@@ -27,7 +27,7 @@ include "./views/layout/header.php"
 
 
                             <a href="index.php?act=form-them-san-pham">
-                                <h1>Quản Lý Mỹ Phẩm</h1>
+                                <h1>Quản Lý Sản Phẩm</h1>
                             </a>
                         </div>
 
