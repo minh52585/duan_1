@@ -1,123 +1,127 @@
-<?php require_once 'layout/header.php'; ?>
-<?php require_once 'layout/menu.php'; ?>
+<?php
+class GioHang
+{
+    public $conn;
 
-<div class="cart-main-wrapper section-padding">
-    <main>
-        <!-- breadcrumb area start -->
-        <div class="breadcrumb-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="breadcrumb-wrap">
-                            <nav aria-label="breadcrumb">
-                                <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="<?= BASE_URL ?>"><i class="fa fa-home"></i></a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- breadcrumb area end -->
+    public function __construct()
+    {
+        $this->conn = connectDB();
+    }
 
-        <!-- cart main wrapper start -->
-        <div class="cart-main-wrapper section-padding">
-            <div class="container">
-                <div class="section-bg-color">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!-- Cart Table Area -->
-                            <form action="<?= BASE_URL . '?act=cap-nhat-gio-hang' ?>" method="POST">
-                                <div class="cart-table table-responsive">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th class="pro-thumbnail">Ảnh sản phẩm</th>
-                                                <th class="pro-title">Tên sản phẩm</th>
-                                                <th class="pro-price">Giá</th>
-                                                <th class="pro-quantity">Số lượng</th>
-                                                <th class="pro-subtotal">Tổng tiền</th>
-                                                <th class="pro-remove">Thao tác</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $tongGioHang = 0;
+    public function getGioHangFromUser($id)
+    {
+        try {
+            $sql = "SELECT * FROM gio_hangs WHERE tai_khoan_id = :tai_khoan_id  ORDER BY id DESC";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(
+                [
+                    ':tai_khoan_id' => $id
+                ]
+            );
+            return $stmt->fetch();
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
 
-                                            foreach ($chiTietGioHang as $sanPham) {
-                                                $giaSanPham = $sanPham['gia_khuyen_mai'] > 0 ? $sanPham['gia_khuyen_mai'] : $sanPham['gia_san_pham'];
-                                                $tongTien = $giaSanPham * $sanPham['so_luong'];
-                                                $tongGioHang += $tongTien;
-                                            ?>
-                                                <tr>
-                                                    <td class="pro-thumbnail">
-                                                        <img class="img-fluid" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="<?= $sanPham['ten_san_pham'] ?>">
-                                                    </td>
-                                                    <td class="pro-title"><?= $sanPham['ten_san_pham'] ?></td>
-                                                    <td class="pro-price">
-                                                        <span><?= formatPrice($giaSanPham) . ' đ' ?></span>
-                                                    </td>
-                                                    <td class="pro-quantity">
-                                                        <div class="pro-qty">
-                                                            <input type="number" name="so_luong[]" value="<?= $sanPham['so_luong'] ?>" min="1">
-                                                            <input type="hidden" name="san_pham_id[]" value="<?= $sanPham['san_pham_id'] ?>" >
-                                                        </div>
-                                                    </td>
-                                                    <td class="pro-subtotal">
-                                                        <span><?= formatPrice($tongTien) . ' đ' ?></span>
-                                                    </td>
-                                                    <td class="pro-remove">
-                                                        <button type="submit" formaction="<?= BASE_URL . '?act=xoa-san-pham-gio-hang' ?>" name="chi_tiet_gio_hang_id" value="<?= $sanPham['id'] ?>" class="btn btn-danger">
-                                                            <i class="fa fa-trash-o"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            <?php } ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <button type="submit" class="btn btn-sqr btn-primary">Cập Nhật Giỏ Hàng</button>
-                            </form>
+    public function getDetailGioHang($id)
+    {
+        try {
+            $sql = "SELECT chi_tiet_gio_hangs.*, san_phams.ten_san_pham, san_phams.hinh_anh, san_phams.gia_san_pham, san_phams.gia_khuyen_mai
+              FROM chi_tiet_gio_hangs
+              INNER JOIN san_phams ON chi_tiet_gio_hangs.san_pham_id = san_phams.id
+              WHERE chi_tiet_gio_hangs.gio_hang_id = :gio_hang_id";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(
+                [
+                    ':gio_hang_id' => $id
+                ]
+            );
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
 
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-5 ml-auto">
-                            <!-- Cart Calculation Area -->
-                            <div class="cart-calculator-wrapper">
-                                <div class="cart-calculate-items">
-                                    <h6>Tổng đơn hàng</h6>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tr>
-                                                <td>Tổng tiền sản phẩm</td>
-                                                <td><?= formatPrice($tongGioHang) . 'đ' ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Vận chuyển</td>
-                                                <td>30.000 đ</td>
-                                            </tr>
-                                            <tr class="total">
-                                                <td>Tổng thanh toán</td>
-                                                <td class="total-amount"><?= formatPrice($tongGioHang + 30000) ?></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <a href="<?= BASE_URL . '?act=thanh-toan' ?>" class="btn btn-sqr d-block">Tiến hành đặt
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- cart main wrapper end -->
-    </main>
-</div>
-<!-- cart main wrapper end -->
 
-<?php require_once 'layout/miniCart.php'; ?>
-<?php require_once 'layout/footer.php'; ?>
+    public function addGioHang($id)
+    {
+        try {
+            $sql = "INSERT INTO gio_hangs (tai_khoan_id) VALUES(:id)";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(
+                [
+                    ':id' => $id
+                ]
+            );
+            return $this->conn->lastInsertId();
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
+
+    public function updateSoLuong($gio_hang_id, $san_pham_id, $so_luong)
+    {
+        //   var_dump($gio_hang_id);
+        // var_dump($san_pham_id);
+        // var_dump($so_luong);
+
+        //                 die;
+        try {
+            $sql = "UPDATE chi_tiet_gio_hangs 
+      SET so_luong = :so_luong
+      WHERE gio_hang_id = :gio_hang_id AND san_pham_id = :san_pham_id";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(
+                [
+                    ':gio_hang_id' => $gio_hang_id,
+                    ':san_pham_id' => $san_pham_id,
+                    ':so_luong' => $so_luong,
+
+
+                ]
+            );
+            return true;
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
+ 
+
+
+
+    public function addDetailGioHang($gio_hang_id, $san_pham_id, $so_luong)
+    {
+        try {
+            $sql = "INSERT INTO chi_tiet_gio_hangs (gio_hang_id, san_pham_id, so_luong) VALUES(:gio_hang_id, :san_pham_id, :so_luong)";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(
+                [
+                    ':gio_hang_id' => $gio_hang_id,
+                    ':san_pham_id' => $san_pham_id,
+                    ':so_luong' => $so_luong,
+
+
+                ]
+            );
+            return true;
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
+
+
+
+    public function deleteSanPhamGioHang($gioHangId)
+    {
+        try {
+            $sql = "DELETE FROM chi_tiet_gio_hangs WHERE gio_hang_id = :gioHangId";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([':gioHangId' => $gioHangId]);
+            return true;
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
+
+}
