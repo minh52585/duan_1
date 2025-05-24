@@ -99,6 +99,5 @@ match ($act) {
   // 'sua-thong-tin-ca-nhan-quan-tri' => (new AdminTaiKhoanController())->postEditCaNhanQuanTri(),
 
   'sua-mat-khau-ca-nhan-quan-tri' => (new AdminTaiKhoanController())->postEditMatKhauCaNhan(),
-  // bieu do thong ke
-  'bieu-do' => (new AdminBaoCaoThongKeController())->bieuDo(),
+  
 };
